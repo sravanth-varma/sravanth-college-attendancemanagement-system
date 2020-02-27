@@ -186,7 +186,7 @@ app.post('/register',(request,response)=>{
                                         console.log(error);
                                     }else{
                                         console.log(`Message sent: ${info.response}`);
-                                        response.send({message:"updated"})
+                                        response.send({message:"generated"})
                                     }
                                    
                                 });
