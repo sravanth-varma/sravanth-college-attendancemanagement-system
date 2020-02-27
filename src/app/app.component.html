@@ -1,0 +1,115 @@
+<nav class=" navbar-expand-md navbar-fixedtop">
+  <!-- Brand -->
+
+   <!-- <div class="navbar-brand" >
+    <img src="\assets\brand.jpeg" alt="Logo" style="width:40px;">
+  </div>  -->
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="home"><i class="fa fa-fw fa-home"></i>Home</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="fas fa-university"></i>&nbsp;Departments</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" routerLink="civil">Civil</a>
+          <a class="dropdown-item" routerLink="cse">C.S.E</a>
+          <a class="dropdown-item" routerLink="ece">E.C.E</a>
+          <a class="dropdown-item" routerLink="mechanical">Mechanical</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="aboutus"><i class="fas fa-users"></i>&nbsp;About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="contactus"><i class="fa fa-fw fa-envelope"></i>Contact Us</a>
+      </li>
+      <li class="nav-item" *ngIf="!cv.loggedInStatus">
+        <a class="nav-link" routerLink="login"><i class="fa fa-fw fa-user"></i>Login</a>
+      </li>
+       <li class="nav-item" *ngIf="cv.loggedInStatus">
+        <a class="nav-link" routerLink="login">Logout</a>
+      </li>
+    </ul>
+  </div>
+
+</nav>
+<router-outlet></router-outlet>
+<footer class="ftco-footer ftco-section">
+  <div class="container-fluid">
+      <div class="row mb-4">
+          <div class="col-md">
+              <img src='https://upload.wikimedia.org/wikipedia/en/6/6c/Asian_Institute_of_Technology-Logo.png' alt="" height="150px" width="150px">
+          </div>
+          <div class="col-md">
+              <div class="ftco-footer-widget mb-4">
+                  <h5 class="ftco-heading-2">About Website</h5>
+                  <p>The Asian Institute of Technology, is commited to making it's website accessible to all users.</p>
+                  <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5" size>
+                      <li class="ftco-animate"><a href="#"><span class="fab fa-twitter"></span></a></li>
+                      <li class="ftco-animate"><a href="#"><span class="fab fa-facebook"></span></a></li>
+                      <li class="ftco-animate"><a href="#"><span class="fab fa-instagram "></span></a></li>
+                  </ul>
+                    
+              </div>
+              
+          </div>
+          <div class="col-md">
+              <div class="ftco-footer-widget mb-d ml-md-4">
+                  <h5 class="ftco-heading-2">Quick Links</h5>
+                  <ul class="list-unstyled">
+                      <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Help Center</a></li>
+                      <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Campus Safety</a></li>
+                      <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Library</a></li>
+                      <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>FeedBack</a></li>
+                  </ul>
+
+
+              </div>
+
+          </div>
+          <div class="col-md">
+              <div class="ftco-footer-widget mb-4">
+                  <h5 class="ftco-heading-2">Services</h5>
+                  <ul class="list-unstyled" style="color: gray;">
+                      <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Bookstore</a></li>
+                      <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Transportation</a></li>
+                      <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Fee & Payment</a></li>
+                      <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Accommodations</a></li>
+                      <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>HR Oppurtunities</a></li>
+                  </ul>
+              </div>
+
+          </div>
+          <div class="col-md">
+              <div class="ftco-footer-widget mb-4">
+                  <h5 class="ftco-heading-2">Have A Question?</h5>
+                  <div class="block-23 mb-3">
+                      <ul>
+                          <li><span class="fas fa-map-marker-alt"></span><span class="text"> 11B,Raheja Mindspace, Hyderabad, Telangana, India.</span></li>
+                          <li><a href="#"><span class="fas fa-phone"></span><span class="text"> +91 900000009</span></a></li>
+                          <li><a href="#"><span class="far fa-envelope"></span><span class="text"> info@ait.com</span></a></li>
+                      </ul>
+
+                  </div>
+                  
+              </div>
+
+          </div>
+
+      </div>
+      <div class="row">
+          <div class="col-md-12 text-center">
+              <p>Copyright &copy;<script type="document.write(newData().getFullYear());"></script> All Rights Reserved 2016.</p>
+          </div>
+
+      </div>
+  </div>
+</footer>

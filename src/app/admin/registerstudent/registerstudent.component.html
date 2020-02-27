@@ -1,0 +1,164 @@
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <div class="display-4 bg-primary">
+                Registration Form
+            </div>
+            <form #ref1="ngForm" (ngSubmit)="registerStudent(ref1.value);reset()">
+                <div class="form-group">
+                    <label for="fn">First Name</label>
+                    <input type="text" name="fn" id="fn" class="form-control" ngModel>
+                </div>
+                <div class="form-group">
+                    <label for="ln">Last Name</label>
+                    <input type="text" name="ln" id="ln" class="form-control" ngModel>
+                </div>
+                <div class="form-group">
+                    <label for="pw">Password</label>
+                    <input type="password" name="pw" id="pw" class="form-control" ngModel>
+                </div>
+                <div class="form-check">
+                    Choose Gender:<br>
+                    <input type="radio" name="a">Male<br>
+                    <input type="radio" name="a">Female<br>
+                </div>
+                <div class="form-group">
+                    <label for="ph">Phone No</label>
+                    <input type="number" name="ph" id="ph" class="form-control" ngModel>
+                </div>
+                <div class="form-group">
+                    <label for="em">Email Id</label>
+                    <input type="email" name="em" id="em" class="form-control" ngModel>
+                </div>
+                <div class="form-group">
+                    Department<br>
+              <select name="department" class="form-control" ngModel>
+              <option value="c">Civil</option>
+              <option value="m">Mechanical</option>
+              <option value="e">E.C.E</option>
+              <option value="cs">C.S.E</option>
+              </select>
+                </div>
+                <div class="form-group">
+                    <label for="ad">Address</label>
+                    <input type="textarea" name="ad" id="ad" class="form-control" ngModel>
+                </div>
+
+                <div class="form-group">
+                    <label for="yr">Year of Join</label>
+                    <input type="number" name="yr" id="yr" class="form-control" ngModel>
+                </div>
+
+                <div class="form-group">
+                    <label for="ssc">SSC %</label>
+                    <input type="number" name="ssc" id="ssc" class="form-control" ngModel>
+                </div>
+ 
+                <div class="form-group">
+                    <label for="inter">Inter %</label>
+                    <input type="inter" name="inter" id="inter" class="form-control" ngModel>
+                </div>
+
+                <div class="text-center">
+                    <button class="btn btn-success" type="submit">Register</button>
+                </div>
+
+
+            
+
+            </form>
+        </div>
+        <div class="col-3"></div>
+    </div>
+</div> -->
+<div class="container jumbotron">
+    <div class="row">
+    <div class="col-3"></div>
+    <div class="col-6">
+    <h3 class="text-info">Registration Form</h3>
+    <form #ref1="ngForm" (ngSubmit)="registerStudent(ref1.value);">
+        <div class="form-group">
+            <label for="fn">FirstName</label>
+            <input type="text" name="fn" #ref12="ngModel" id="fn" autocomplete="off" class="form-control"  required   ngModel>
+            <div *ngIf=" ref12.touched && ref12.invalid " class="alert alert-danger">Firstname is Required 
+            </div>
+        </div>   
+        <div class="form-group">
+            <label for="ln">LastName</label>
+            <input type="text" name="ln" id="ln"#ref2="ngModel" autocomplete="off" class="form-control" required  ngModel>
+            <div *ngIf=" ref2.touched && ref2.invalid " class="alert alert-danger">Lastname is Required 
+            </div>
+        </div>    
+    
+        <!-- <div class="form-group">
+            <label for="pw">Password</label>
+            <input type="password" name="pw" id="pw" #ref3="ngModel" autocomplete="off" class="form-control"   ngModel>  
+        </div> -->
+        <div class="form-check">
+            <label for="gender" class="form-check-label">Gender</label> <br> 
+            
+            <input type="radio" name="m" id="gender" value="male" #ref4="ngModel" class="form-check-input" required  ngModel>Male<br>
+            <input type="radio" name="m" id="gender" value="female" #ref4="ngModel" class="form-check-input" required  ngModel>Female
+            </div> 
+         <div class="form-group">
+            <label for="ph">Phone Number</label>
+            <input type="number" name="ph" id="ph" autocomplete="off" #ref5="ngModel" class="form-control" required pattern="\d\d\d\d\d\d\d\d\d\d" ngModel>  
+            <div *ngIf=" ref5.touched && ref5.invalid " class="alert alert-danger">phoneNumber Must contain 10 Digits 
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="email">E-Mail Id</label>
+            <input type="text" name="email" id="email" autocomplete="off" #email="ngModel" class="form-control" pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"  ngModel>  
+       <div class="help-block" *ngIf="email.errors?.required && email.touched"> email is required</div>
+       <div class="help-block" *ngIf="email.errors?.email && email.touched"> E-mail is invalid</div>
+        </div>
+        <div class="form-group">
+            choose Department
+              <select name="course" id="course" #ref7="ngModel" class="form-control" ngModel>
+               <option value="cse">CSE</option>
+               <option value="ece">ECE</option>
+               <option value="civil">CIVIL</option>
+               <option value="mech">MECH</option>
+             </select>
+             <div *ngIf=" ref7.touched && ref7.invalid " class="alert alert-danger">choose department 
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="ad">Address</label>
+            <textarea name="ad" id="ad" #ref8="ngModel" autocomplete="off" class="form-control"   ngModel>  </textarea>
+        </div>
+    
+        <div class="form-group">
+            <label for="year">Year</label>
+            <input type="number" name="year" id="year" autocomplete="off" #ref9="ngModel" class="form-control" required pattern="\d\d\d\d" ngModel>  
+            <div *ngIf=" ref9.touched && ref9.invalid " class="alert alert-danger">must enter year
+            </div>
+        </div>
+        <!-- <div class="form-group">
+            <label for="ye">Year Of Join</label>
+            <input type="number" name="ye" id="ye" #ref9="ngModel" autocomplete="off" class="form-control" required pattern="/d/d/d/d"  ngModel>  
+            <div *ngIf=" ref9.touched && ref9.invalid " class="alert alert-danger">year required 
+            </div>
+        </div> -->
+          
+        <div class="form-group">
+            <label for="ssc">SSC %</label>
+            <input type="number" name="ssc" id="ssc" #ref10="ngModel" autocomplete="off" class="form-control"   ngModel>  
+       
+        </div>
+        <div class="form-group">
+            <label for="inter">Inter %</label>
+            <input type="number" name="inter" id="inter" #ref11="ngModel"autocomplete="off" class="form-control"   ngModel>  
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-info" [disabled]="ref1.invalid"> Register </button>
+    
+        </div>
+    
+    </form>
+    
+    </div>
+    <div class="col-3"></div>
+    </div>
+    </div>

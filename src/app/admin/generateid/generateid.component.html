@@ -1,0 +1,43 @@
+<form #ref="ngForm" (ngSubmit)="generateId(ref.value)">
+    <div class="form-group">
+        <label for="yr">Year</label>
+        <input type="number" name="year" id="yr" class="form-control" ngModel>
+    </div>
+    <div class="form-group">
+        Choose Branch name<br>
+        <select name="branchname" class="form-control" ngModel>
+        <option value="civil">Civil</option>
+        <option value="mech">Mechanical</option>
+        <option value="ece">E.C.E</option>
+        <option value="cse">C.S.E</option>
+        
+        
+    </select> 
+    </div>
+    <div class="form-group">
+        Choose Branch Code<br>
+        <select name="branchcode" class="form-control" ngModel>
+        <option value="01">Civil</option>
+        <option value="02">Mechanical</option>
+        <option value="03">E.C.E</option>
+        <option value="04">C.S.E</option>
+    </select> 
+            </div>
+    <div class="text-center">
+        <button class="btn btn-success" type="submit">Generate Id</button>
+    </div>
+</form>
+<div class="table-responsive">  
+<table class="table">
+    <thead>
+    <th>Year</th>
+    <th>Branch Name</th>
+    <th>Branch Code</th>
+</thead>
+ <tr *ngFor="let k of data">
+     <td>{{k.year}}</td>
+     <td>{{k.branchname}}</td>
+     <td>{{k.branchcode}}</td>
+ </tr>
+</table>
+</div>

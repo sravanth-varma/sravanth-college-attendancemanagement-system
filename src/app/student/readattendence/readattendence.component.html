@@ -1,0 +1,41 @@
+<!-- <div class="row">
+    <div class="col-6">
+        <div class="table">
+            <thead>
+                <th>Attendance</th>
+                <th>Date</th>
+            </thead>
+            <tr *ngFor="let k of  data">
+                <td>{{k.attendance}}</td>
+                <td>{{k.date}}</td>
+            </tr>
+        </div>
+    </div>
+    <div class="col-6"></div>
+</div> -->
+
+<table class="container">
+    <div class="row">
+        <div class="col-6">
+         
+  <thead>
+    <tr>
+      <th>
+        <h1>Attendance</h1>
+      </th>
+      <th>
+        <h1>Date</h1>
+      </th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let k of  data">
+        <td>{{k.attendance}}</td>
+        <td>{{k.date}}</td>
+    </tr>
+    
+  </tbody>
+</div>
+</div>
+</table>

@@ -1,0 +1,105 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.container-fluid
+{
+  
+    width: 100%;
+    padding: 20px;
+    margin: 100px auto;
+    display: flex;
+    /* background: #ddd; */
+
+}
+.box{
+    height: 300px;
+    padding: 25px;
+    background-image: url(  https://www.socialtalent.com/wp-content/uploads/2016/12/blur-1867166_640.jpg);
+    height: 350px;
+    width: 200px;
+    /* background: linear-gradient(90deg, #efd5ff 0%, #515ada 100%); */
+    border: 3px solid #ddd;
+    font-size: 30px;
+    flex: 1;
+    transition: 3s;
+}
+.box1{
+    height: 350px;
+    padding: 25px;
+    object-fit: cover;
+   /* background-image: url(); */
+    /* background: linear-gradient(90deg, #efd5ff 0%, #515ada 100%); */
+    border: 3px solid #ddd;
+    font-size: 30px;
+    flex: 1;
+    transition: 3s;
+}
+.box2{
+    height: 350px;
+    padding: 25px;
+    background-image: url(https://adoptoprod.blob.core.windows.net/article/5Jads9Re50KN7DVzL4gaFA.png?6883);
+    /* background: linear-gradient(90deg, #efd5ff 0%, #515ada 100%); */
+    border: 3px solid #ddd;
+    font-size: 30px;
+    flex: 1;
+    transition: 3s;
+}
+.box3{
+    height: 350px;
+    padding: 25px;
+    /* background-image: url(https://s3-ap-southeast-1.amazonaws.com/images.humanresourcesonline.net/wp-content/uploads/2016/11/Jerene-Nov-2016-pay-increase-123RF-700x420.jpg); */
+    /* background: linear-gradient(90deg, #efd5ff 0%, #515ada 100%); */
+    /* width: 200px; */
+   
+    border: 3px solid #ddd;
+    font-size: 30px;
+    flex: 1;
+    transition: 3s;
+}
+.box4{
+    height: 350px;
+    padding: 25px;
+   background-image: url(https://cdn.thegentlemansjournal.com/wp-content/uploads/2015/02/google-highest-paid-jobs-3-624x692-c-center.jpg);
+    /* background: linear-gradient(90deg, #efd5ff 0%, #515ada 100%); */
+    background-repeat: no-repeat;
+    border: 3px solid #ddd;
+    font-size: 30px;
+    flex: 1;
+    transition: 3s;
+}
+.box5{
+    height: 350px;
+    padding: 25px;
+    background-image: url(https://www.insuremypath.org/sites/default/files/styles/490x350/public/2019-08/starting-salary-648x364-c-default.jpg?itok=6rkKoqdB);
+    /* background: linear-gradient(90deg, #efd5ff 0%, #515ada 100%); */
+    border: 3px solid #ddd;
+    font-size: 30px;
+    flex: 1;
+    transition: 3s;
+}
+.box:hover{
+    flex:3;
+
+}
+.box1:hover{
+    flex:3;
+
+}
+.box2:hover{
+    flex:3;
+
+}
+.box3:hover{
+    flex:3;
+
+}
+.box4:hover{
+    flex:3;
+
+}
+.box5:hover{
+    flex:3;
+
+}

@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col-6">
+        <div class="table">
+            <thead>
+                <th>Year</th>
+                <th>Branch</th>
+                <th>studenId</th>
+                <th>Subject1</th>
+                <th>Subject2</th>
+                <th>Subject3</th>
+                <th>Total</th>
+            </thead>
+            <tr *ngFor="let k of  data">
+                <td>{{k.year}}</td>
+                <td>{{k.branch}}</td>
+                <td>{{k.studentid}}</td>
+                <td>{{k.subject1}}</td>
+                <td>{{k.subject2}}</td>
+                <td>{{k.subject3}}</td>
+                <td>{{k.total}}</td>
+            </tr>
+        </div>
+    </div>
+    <div class="col-6"></div>
+</div>
