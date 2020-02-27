@@ -459,4 +459,4 @@ console.log("error in reading",error);
 
 //port number
 const port=1000;
-app.listen(port,()=>{console.log(`server listening on ${port}..`)})
+app.listen(process.env.PORT || potrt,()=>{console.log(`server listening on ${port}..`)})
