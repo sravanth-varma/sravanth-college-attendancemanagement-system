@@ -209,7 +209,7 @@ app.get('/read1/:department',(request,response)=>{
             //if array is empty
             else if(dataArray.length==0)
             {
-              response.send({message:"no data foundd"})  
+              response.send({message:"no data found"})  
             }
             //if array has data
             else{
@@ -459,4 +459,4 @@ console.log("error in reading",error);
 
 //port number
 const port=1000;
-app.listen(process.env.PORT || potrt,()=>{console.log(`server listening on ${port}..`)})
+app.listen(process.env.PORT || port,()=>{console.log(`server listening on ${port}..`)})
